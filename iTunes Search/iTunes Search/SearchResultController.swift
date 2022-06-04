@@ -10,14 +10,45 @@ import Foundation
 class SearchResultController {
 //MARK: - Properties
     // Base URL
-    let baseURL = "https://itunes.apple.com/search?term="
+    let baseURLString = "https://itunes.apple.com/search?"
     // Search results array
     var searchResults: [SearchResult] = []
     
 //MARK: - Methods
     // Perform search method
-    func performSearch(searchTerm: String, resultType: ResultType, completion: (Error?) -> Void) {
-        let searchURL = baseURL
+    func performSearch(searchTerm: String, resultType: ResultType, completion: @escaping (Error?) -> Void) {
+        // Constructing the search URL
+        var searchURL: URL {
+            var urlComponents = URLComponents(string: baseURLString)!
+            urlComponents.queryItems?.append(URLQueryItem(name: "limit", value: "25"))
+            urlComponents.queryItems?.append(URLQueryItem(name: "media", value: resultType.rawValue))
+            urlComponents.queryItems?.append(URLQueryItem(name: "term", value: searchTerm))
+            return urlComponents.url!
+        }
+        
+        // Starting the URL Session data task
+        URLSession.shared.dataTask(with: searchURL) { data, _, error in
+            if let error = error {
+                print("ERROR: Search failed! error message: \(error)")
+                completion(error)
+                return
+            }
+            guard let data = data else {
+                print("ERROR: Data not found!")
+                completion(NSError())
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let searchResults = try decoder.decode(SearchResults.self, from: data)
+                self.searchResults = searchResults.results
+                completion(nil)
+            } catch {
+                print("ERROR: Could not decode received data! Error message: \(error)")
+                completion(error)
+            }
+        }.resume()
     }
     
     
