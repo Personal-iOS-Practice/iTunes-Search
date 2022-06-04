@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Individual search result model
 struct SearchResult: Codable {
 //MARK: - Properties
     let title: String
@@ -18,4 +19,11 @@ struct SearchResult: Codable {
         case creator = "artistName"
     }
     
+}
+
+
+/// Model used to decode JSON data into
+struct SearchResults: Codable {
+//MARK: - Properties
+    let results: [SearchResult]
 }
