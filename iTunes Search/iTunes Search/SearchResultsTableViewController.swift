@@ -21,6 +21,7 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        searchBar.searchTextField.addDoneButtonOnKeyboard()
     }
     
 //MARK: TableView Data source and Delegate methods
@@ -60,4 +61,3 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
     }
 
 }
-

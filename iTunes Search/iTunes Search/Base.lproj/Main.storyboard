@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="mAr-4d-VHc">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="mAr-4d-VHc" userLabel="Search View">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-iJ-jvS">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-iJ-jvS" userLabel="Search Stack View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <subviews>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qyO-hj-MBR">
@@ -30,13 +30,16 @@
                                                 <segment title="Movies"/>
                                             </segments>
                                         </segmentedControl>
-                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-pF-Fof">
-                                            <rect key="frame" x="0.0" y="44" width="414" height="56"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                        <searchBar contentMode="redraw" placeholder="Search here:" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-pF-Fof">
+                                            <rect key="frame" x="0.0" y="43.5" width="414" height="56.5"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                         </searchBar>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="qyO-hj-MBR" firstAttribute="leading" secondItem="0Gf-iJ-jvS" secondAttribute="leading" constant="50" id="BvA-mf-QDl"/>
+                                        <constraint firstItem="8gf-pF-Fof" firstAttribute="leading" secondItem="0Gf-iJ-jvS" secondAttribute="leading" id="buK-RD-Cpr"/>
+                                        <constraint firstAttribute="bottom" secondItem="8gf-pF-Fof" secondAttribute="bottom" id="lRf-if-zeN"/>
+                                        <constraint firstAttribute="trailing" secondItem="8gf-pF-Fof" secondAttribute="trailing" id="uKx-jf-Hlm"/>
                                         <constraint firstAttribute="trailing" secondItem="qyO-hj-MBR" secondAttribute="trailing" constant="50" id="xK0-VA-qJj"/>
                                     </constraints>
                                 </stackView>
@@ -50,7 +53,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" textLabel="qzO-4L-nAp" detailTextLabel="85Q-ya-7cf" style="IBUITableViewCellStyleSubtitle" id="3p1-IK-DVT">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" textLabel="qzO-4L-nAp" detailTextLabel="85Q-ya-7cf" style="IBUITableViewCellStyleSubtitle" id="3p1-IK-DVT">
                                 <rect key="frame" x="0.0" y="144.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3p1-IK-DVT" id="c9J-EX-jMf">
