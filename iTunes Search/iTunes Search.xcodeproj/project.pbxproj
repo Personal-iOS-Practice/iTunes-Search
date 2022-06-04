@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		7B4CCFFF284B025A003CE4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CCFFE284B025A003CE4F2 /* AppDelegate.swift */; };
 		7B4CD001284B025A003CE4F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CD000284B025A003CE4F2 /* SceneDelegate.swift */; };
-		7B4CD003284B025A003CE4F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CD002284B025A003CE4F2 /* ViewController.swift */; };
 		7B4CD006284B025A003CE4F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4CD004284B025A003CE4F2 /* Main.storyboard */; };
 		7B4CD008284B025C003CE4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4CD007284B025C003CE4F2 /* Assets.xcassets */; };
 		7B4CD00B284B025C003CE4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4CD009284B025C003CE4F2 /* LaunchScreen.storyboard */; };
 		7B4CD018284B05D9003CE4F2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CD017284B05D9003CE4F2 /* SearchResult.swift */; };
 		7B4CD01A284B1463003CE4F2 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CD019284B1462003CE4F2 /* ResultType.swift */; };
 		7B4CD01C284B14C7003CE4F2 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CD01B284B14C7003CE4F2 /* SearchResultController.swift */; };
+		7B4CD01F284B283A003CE4F2 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4CD01E284B283A003CE4F2 /* SearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B4CCFFB284B025A003CE4F2 /* iTunes Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4CCFFE284B025A003CE4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B4CD000284B025A003CE4F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B4CD002284B025A003CE4F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B4CD005284B025A003CE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B4CD007284B025C003CE4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B4CD00A284B025C003CE4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		7B4CD017284B05D9003CE4F2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		7B4CD019284B1462003CE4F2 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		7B4CD01B284B14C7003CE4F2 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		7B4CD01E284B283A003CE4F2 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 		7B4CD014284B028A003CE4F2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7B4CD002284B025A003CE4F2 /* ViewController.swift */,
+				7B4CD01E284B283A003CE4F2 /* SearchResultsTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			files = (
 				7B4CD01C284B14C7003CE4F2 /* SearchResultController.swift in Sources */,
 				7B4CD01A284B1463003CE4F2 /* ResultType.swift in Sources */,
-				7B4CD003284B025A003CE4F2 /* ViewController.swift in Sources */,
+				7B4CD01F284B283A003CE4F2 /* SearchResultsTableViewController.swift in Sources */,
 				7B4CCFFF284B025A003CE4F2 /* AppDelegate.swift in Sources */,
 				7B4CD018284B05D9003CE4F2 /* SearchResult.swift in Sources */,
 				7B4CD001284B025A003CE4F2 /* SceneDelegate.swift in Sources */,
