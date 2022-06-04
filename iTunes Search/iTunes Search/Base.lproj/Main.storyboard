@@ -29,6 +29,9 @@
                                                 <segment title="Music"/>
                                                 <segment title="Movies"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="searchTypeChanged:" destination="QfQ-WR-hrk" eventType="valueChanged" id="fLz-oc-O2B"/>
+                                            </connections>
                                         </segmentedControl>
                                         <searchBar contentMode="redraw" placeholder="Search here:" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-pF-Fof">
                                             <rect key="frame" x="0.0" y="43.5" width="414" height="56.5"/>

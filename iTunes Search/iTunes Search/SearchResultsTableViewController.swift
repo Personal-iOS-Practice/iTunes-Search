@@ -16,6 +16,28 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
     @IBOutlet weak var searchTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     
+//MARK: - IBActions
+    @IBAction func searchTypeChanged(_ sender: UISegmentedControl) {
+        var searchType: ResultType {
+            switch searchTypeSegmentedControl.selectedSegmentIndex {
+            case 0: return ResultType.software
+            case 1: return ResultType.music
+            case 2: return ResultType.movie
+            default: return ResultType.software
+            }
+        }
+        let searchTerm = searchBar.text ?? ""
+        searchResultsController.performSearch(searchTerm: searchTerm, resultType: searchType) { error in
+            if let error = error {
+                print("ERROR: Search Failed! Error message: \(error)")
+                return
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
 //MARK: - Methods
     // Lifecycle
     override func viewDidLoad() {
